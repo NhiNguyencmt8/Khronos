@@ -57,10 +57,10 @@ active_window:
   # Semantic Object Detector. The object detector is optional, by not setting the 'type' param no object detection will be performed.
   object_detector:
     type: "ConnectedSemantics" # 'ConnectedSemantics' 'InstanceForwarding'
-    min_cluster_size: 1300 # pixels
+    min_cluster_size: 50 # pixels
     use_full_connectivity: true
     use_3d: true
-    grid_size: 0.3 # m
+    grid_size: 0.1 # m
     max_range: *max_range # m, 0 for infinite.
 
   # Object association and tracking. The tracker is optional, by not setting the 'type' param no tracking will be performed.
@@ -71,7 +71,7 @@ active_window:
     min_cross_iou: 0.1
     voxel_size: 0.2 # m
     temporal_window: *temporal_window # s
-    min_num_observations: 20
+    min_num_observations: 15
 
   # (Background) map integration.
   projective_integrator:
@@ -85,12 +85,12 @@ active_window:
     type: MeshObjectExtractor
     verbosity: 1
     min_object_allocation_confidence: 0.5
-    min_object_volume: 0.0001 # m^3
+    min_object_volume: 0.005 # m^3
     max_object_volume: 10.0 # m^3
-    min_dynamic_displacement: 2 # m
-    only_extract_reconstructed_objects: false # used to be false
-    min_object_reconstruction_confidence: 0.7
-    min_object_reconstruction_observations: 1 # Can use higher for very noisy detections.
+    min_dynamic_displacement: 1 # m
+    only_extract_reconstructed_objects: true # used to be false
+    min_object_reconstruction_confidence: 0.5
+    min_object_reconstruction_observations: 0 # Can use higher for very noisy detections.
     object_reconstruction_resolution: -0.02 # Positive: voxel size in meters. Negative: fraction of the extent. 0: Skip. (-0.02)
     visualize_classification: false # For debugging.
     projective_integrator:
