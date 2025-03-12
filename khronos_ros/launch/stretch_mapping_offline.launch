@@ -28,7 +28,6 @@
     <!-- Dataset -->
     <arg name="bag_path" default="/home/rail/Documents/bagfinal/AwareHome_2/segmentation/experiment2_semantic.bag" if="$(eval dataset == 'ade20kfull')"/>
 
-    <!-- ============ Auto-generated args ============ -->
     <!-- Sensing frame -->
     <arg name="sensor_frame" default="camera_color_optical_frame"/>
     <arg name="robot_frame" default="base_link"/>
@@ -52,7 +51,7 @@
     <include file="$(find khronos_ros)/launch/khronos_camera_setup.launch" />
 
     <!-- ============ Run ============ -->
-    <!-- Play data -->
+    <!-- Play the bagfile data -->
     <include file="$(find khronos_ros)/launch/datasets/play_uHumans.launch" ns="khronos_node">
         <arg name="bag_file" value="$(arg bag_path)"/>
         <arg name="semantic_image_topic" value="$(arg label_topic)"/>

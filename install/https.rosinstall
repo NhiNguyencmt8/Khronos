@@ -19,7 +19,7 @@
     version: main
 - git:
     local-name: hydra_ros
-    uri: https://github.com/MIT-SPARK/Hydra-ROS.git
+    uri: https://github.com/harshmuriki/Hydra-ROS.git
     version: main
 - git:
     local-name: pose_graph_tools
