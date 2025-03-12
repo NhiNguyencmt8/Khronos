@@ -67,3 +67,26 @@ CATKIN_IGNORE
 # Local utilities
 Notes.txt
 *compile_commands.json
+
+# Khronos Submodules
+/catkin_simple/
+/config_utilities/
+/dbow2_catkin/
+/hydra/
+/hydra_ros/
+/khronos_ros/launch/README.md
+/khronos_ros/src/camera_uncompress.py
+/khronos_ros/src/depth_uncompress.py
+/khronos_ros/src/semantic_uncompress.py
+/khronos_ros/src/try.txt
+/kimera_pgmo/
+/kimera_ros/
+/kimera_rpgo/
+/kimera_rviz_markers/
+/kimera_vio/
+/opengv_catkin/
+/pangolin/
+/pose_graph_tools/
+/spark_dsg/
+/spatial_hash/
+/teaser_plusplus/
