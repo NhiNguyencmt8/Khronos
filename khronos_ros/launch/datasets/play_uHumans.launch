@@ -32,6 +32,6 @@
   </include>
 
   <!-- Static TF transforms. -->
-  <include file="$(find hydra_ros)/launch/static_tfs/uhumans2_static_tfs.xml"/>
+  <!-- <include file="$(find hydra_ros)/launch/static_tfs/uhumans2_static_tfs.xml"/> -->
 
 </launch>

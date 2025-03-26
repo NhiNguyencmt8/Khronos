@@ -45,7 +45,7 @@
 
     <arg name="labelspace_config" default="$(arg dataset)_label_space.yaml"/>
     <arg name="semantic_label_remap_filepath" default="$(find hydra)/config/label_remaps/$(arg dataset).yaml"/>
-    <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform" output="screen" args="0.061 -0.016 1.276 -0.265 0.749 0.232 0.562 base_link camera_color_optical_frame" />
+    <node pkg="tf2_ros" type="static_transform_publisher" name="static_transform" output="screen" args="0.044, 0.002, 1.290 0.680, 0.193, -0.098, 0.700 base_link camera_link" />
     
     <!-- Running camera decompression file -->
     <include file="$(find khronos_ros)/launch/khronos_camera_setup.launch" />
@@ -64,7 +64,7 @@
         <arg name="paused" value="true" unless="$(arg use_gt_frame)"/>
     </include>
 
-    <group unless="$(arg use_gt_frame)">
+    <!-- <group unless="$(arg use_gt_frame)">
         <include file="$(find hydra_vio_configs)/launch/uh2_vio.launch" pass_all_args="true">
             <arg name="odom_frame_id" default="world"/>
             <arg name="map_frame_id" default="map"/>
@@ -72,12 +72,12 @@
             <arg name="glog_to_dir" value="true"/>
             <arg name="use_lcd" value="true"/>
             <arg name="lcd_no_detection" default="false"/>
-            <!-- clean, noisy -->
+            
             <arg name="imu_topic" value="/imu_mobile_base"/>
             <arg name="log_output_path" value="$(arg output_dir)"/>
             <arg name="log_output" value="$(arg log_vio)"/>
         </include>
-    </group>
+    </group> -->
 
     <include file="$(find khronos_ros)/launch/khronos.launch" pass_all_args="true">
         <arg name="robot_id" default="0"/>
